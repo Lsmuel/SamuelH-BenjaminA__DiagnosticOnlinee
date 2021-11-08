@@ -1,0 +1,108 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+
+    <ion-buttons slot="start">
+      <ion-back-button 
+          defaultHref="/"
+          text="Back"
+          color="primary"
+          mode="ios">
+        </ion-back-button>
+
+
+    
+
+    </ion-buttons>
+    <ion-title>
+      Datos 
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+<ion-content color="primary">
+<ion-card-content  class="textCenter">
+  
+  
+  <ion-card>
+    <ion-label position="fixed">Rut</ion-label>
+    <ion-input type="text" [(ngModel)]="newForm.rut" required></ion-input>
+  </ion-card>
+
+  <ion-card>
+    <ion-label position="fixed">Nombre</ion-label>
+    <ion-input type="text" [(ngModel)]="newForm.nombre" required></ion-input>
+  </ion-card>
+
+  <ion-card>
+    <ion-label position="fixed">Apellido</ion-label>
+    <ion-input type="text" [(ngModel)]="newForm.apellido" required></ion-input>
+  </ion-card>
+  
+  <ion-card>
+    <ion-label position="fixed">Direccion</ion-label>
+    <ion-input type="text" [(ngModel)]="newForm.direccion" required></ion-input>
+  </ion-card>
+
+  <ion-card>
+    <ion-label position="fixed">Fecha Nacimiento</ion-label>
+    <ion-input type="date" [(ngModel)]="newForm.fechaN" required></ion-input>
+  </ion-card>
+  
+  <ion-card>
+    <ion-label position="fixed">Email </ion-label>
+    <ion-input type="text" [(ngModel)]="newForm.email" required></ion-input>
+  </ion-card>
+
+  <ion-card>
+    <ion-label position="fixed">Tel. (+56 9) </ion-label>
+    <ion-input type="number" [(ngModel)]="newForm.telefono " required></ion-input>
+  </ion-card>
+
+  <ion-card>
+    <ion-label position="fixed">Mensaje </ion-label>
+    <ion-textarea type="text" [(ngModel)]="newForm.mensaje " required></ion-textarea>
+  </ion-card>
+
+
+
+
+
+  <ion-button (click)="addDatos()" expand="block" color="success">
+    Agregar datos
+  </ion-button>
+
+  <ion-list #myList>
+    <ion-list-header>
+      <ion-label><h1>Mis Datos</h1></ion-label>
+    </ion-list-header>
+
+    <ion-list>
+      <ion-item-sliding *ngFor="let form of form">
+        <ion-item>
+          <ion-label text-wrap> 
+            <ion-text color="success">
+            <p>{{form.rut}}</p>
+          </ion-text>
+            <ion-text color="tertiary">
+              <p>{{form.nombre}}</p>
+              <p>{{form.apellido}}</p>
+              <p>{{form.direccion}}</p>
+              <p>{{form.fechaN}}</p>
+            </ion-text>
+            <ion-text color="danger">
+              <p>{{form.email}}</p>
+              <p>{{form.telefono}}</p>
+              <p>{{form.mensaje}}</p>
+            </ion-text>
+            <p>{{form.modified | date: 'short'}}</p>
+          </ion-label>
+        </ion-item>
+        
+        <ion-item-options side="end">
+          <ion-item-option color="secondary" (click)="updateDatos(form)">Actualizar</ion-item-option>
+         <ion-item-option color="danger" (click)="deleteDatos(form)">Eliminar</ion-item-option> 
+        </ion-item-options>
+      </ion-item-sliding>
+    </ion-list>
+  </ion-list>
+</ion-card-content>
+</ion-content>

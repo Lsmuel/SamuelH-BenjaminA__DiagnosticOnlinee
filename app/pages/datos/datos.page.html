@@ -1,0 +1,73 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/" text="Back" color="primary" mode="ios">
+      </ion-back-button>
+    </ion-buttons>
+    <ion-title> Datos </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content color="primary">
+  <ion-card-content  class="textCenter">
+    <ion-card>
+      <ion-label position="fixed">Rut</ion-label>
+      <ion-input type="text" [(ngModel)]="newDato.rut" required></ion-input>
+    </ion-card>
+
+    <ion-card>
+      <ion-label position="fixed">Nombre</ion-label>
+      <ion-input type="text" [(ngModel)]="newDato.nombre" required></ion-input>
+    </ion-card>
+
+    <ion-card>
+      <ion-label position="fixed">Apellido</ion-label>
+      <ion-input
+        type="text"
+        [(ngModel)]="newDato.apellido"
+        required
+      ></ion-input>
+    </ion-card>
+
+    <ion-card>
+      <ion-label position="fixed">Direccion</ion-label>
+      <ion-input
+        type="text"
+        [(ngModel)]="newDato.direccion"
+        required
+      ></ion-input>
+    </ion-card>
+
+    <ion-card>
+      <ion-label position="fixed">Email </ion-label>
+      <ion-input type="text" [(ngModel)]="newDato.email" required></ion-input>
+    </ion-card>
+
+    <ion-card>
+      <ion-label position="fixed">Password </ion-label>
+      <ion-input
+        type="password"
+        [(ngModel)]="newDato.password"
+        required
+      ></ion-input>
+    </ion-card>
+
+    <ion-card>
+      <ion-label position="fixed">Tel. (+56 9) </ion-label>
+      <ion-input
+        type="number"
+        [(ngModel)]="newDato.telefono "
+        required
+      ></ion-input>
+    </ion-card>
+
+    <ion-card>
+      <ion-label position="fixed">Edad </ion-label>
+      <ion-input type="number" [(ngModel)]="newDato.edad " required></ion-input>
+    </ion-card>
+
+    <ion-button (click)="addDatos()" expand="block" color="success">
+      Agregar datos
+    </ion-button>
+  </ion-card-content>
+</ion-content>
