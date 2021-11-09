@@ -37,11 +37,38 @@ const routes: Routes = [
     path: 'formulario-medico',
     loadChildren: () => import('./pages/formulario-medico/formulario-medico.module').then( m => m.FormularioMedicoPageModule),
     canLoad: [AuthGuard]
-  },  {
+  },  
+  {
     path: 'cabeza',
     loadChildren: () => import('./pages/cabeza/cabeza.module').then( m => m.CabezaPageModule),
     canLoad: [AuthGuard]
   },
+  {
+    path: 'pecho',
+    loadChildren: () => import('./pages/pecho/pecho.module').then( m => m.PechoPageModule),
+    canLoad: [AuthGuard]
+  },
+  {
+    path: 'brazos',
+    loadChildren: () => import('./pages/brazos/brazos.module').then( m => m.BrazosPageModule),
+    canLoad: [AuthGuard]
+  },
+  {
+    path: 'manos',
+    loadChildren: () => import('./pages/manos/manos.module').then( m => m.ManosPageModule),
+    canLoad: [AuthGuard]
+  },
+  {
+    path: 'cadera',
+    loadChildren: () => import('./pages/cadera/cadera.module').then( m => m.CaderaPageModule),
+    canLoad: [AuthGuard]
+  },
+  {
+    path: 'piernas',
+    loadChildren: () => import('./pages/piernas/piernas.module').then( m => m.PiernasPageModule),
+    canLoad: [AuthGuard]
+  },
+
 
 
 

@@ -1,14 +1,15 @@
 <ion-header>
 
 
-  <ion-toolbar> <ion-title class="textCenter">Cabeza</ion-title> 
+  <ion-toolbar> <ion-title class="textCenter">Pecho</ion-title> 
   
     <ion-buttons slot="start">
       <ion-back-button 
           defaultHref="/"
           text="Back"
           color="primary"
-          mode="ios">
+          mode="ios"
+          routerLink="/inicio">
         </ion-back-button>
     </ion-buttons>
   
@@ -21,15 +22,15 @@
         <ion-label>Seleccione su sintoma</ion-label>
       </ion-list-header>
       <ion-item >
-        <ion-label>Mareos</ion-label>
+        <ion-label>Presion u opresion</ion-label>
         <ion-radio slot="start" value="biff" required></ion-radio>
       </ion-item>
       <ion-item >
-        <ion-label>Fiebre</ion-label>
+        <ion-label>Nauseas Indigestion o Acides</ion-label>
         <ion-radio slot="start" value="griff" required></ion-radio>
       </ion-item>
       <ion-item >
-        <ion-label>Nauseas y Vomitos</ion-label>
+        <ion-label>Falta de aliento</ion-label>
         <ion-radio slot="start" value="buford" required></ion-radio>
       </ion-item>
     </ion-radio-group>
