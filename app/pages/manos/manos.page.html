@@ -1,41 +1,44 @@
-<ion-header>
+<ion-header class="color">
 
 
-  <ion-toolbar> <ion-title class="textCenter">Pecho</ion-title> 
+  <ion-toolbar color="color"> 
+  <ion-title class="textCenter color" >Manos</ion-title> 
   
-    <ion-buttons slot="start">
+    <ion-buttons  slot="start">
       <ion-back-button 
           defaultHref="/"
           text="Back"
-          color="primary"
-          mode="ios"
-          routerLink="/inicio">
+          color="light"
+          mode="ios">
         </ion-back-button>
     </ion-buttons>
-  
+
   </ion-toolbar>
 </ion-header>
-<ion-content>
-  <ion-list>
-    <ion-radio-group value="biff">
-      <ion-list-header>
-        <ion-label>Seleccione su sintoma</ion-label>
+<ion-content color="color">
+<ion-card-content class="color textCenter ">
+  <ion-list color="color2" class="color2  ion-col ">
+    <ion-radio-group value="biff" color="color" >
+      <ion-list-header class="color2" color="color2">
+        <ion-label class="color2" color="color2" >Seleccione su sintoma</ion-label>
       </ion-list-header>
-      <ion-item >
-        <ion-label>Dolor en los huesos</ion-label>
-        <ion-radio slot="start" value="biff" required></ion-radio>
+      <ion-item  color="color2">
+        <ion-label class="color2">Artristis</ion-label>
+        <ion-radio slot="start" value="biff"  color="light" required></ion-radio>
       </ion-item>
-      <ion-item >
-        <ion-label>Lesion ligamentos</ion-label>
-        <ion-radio slot="start" value="griff" required></ion-radio>
+      <ion-item  color="color2">
+        <ion-label class="color2">Fractura</ion-label>
+        <ion-radio slot="start" value="griff" color="light" required></ion-radio>
       </ion-item>
-      <ion-item >
-        <ion-label>Fractura</ion-label>
-        <ion-radio slot="start" value="buford" required></ion-radio>
-      </ion-item>
+      <ion-item  color="color2">
+        <ion-label >contucion</ion-label>
+        <ion-radio slot="start" value="buford" color="light" required></ion-radio>
+      </ion-item >
     </ion-radio-group>
-    <ion-button (click)="onClick()" expand="block" fill="clear" shape="round">
+    <ion-button (click)="onClick()" expand="block" fill="clear" shape="round" color="light">
       Siguiente
     </ion-button>
   </ion-list>
+  </ion-card-content>
 </ion-content>
+
