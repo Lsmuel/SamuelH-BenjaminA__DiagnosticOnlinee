@@ -29,10 +29,10 @@
               *ngFor = "let medicina of medicina; let i = index"  >
           <ion-card class="" color="light" >
             <ion-card-header>
-              <ion-car-subtitle>
+              <ion-card-subtitle>
                 <span class ="text">{{i+1}}</span>
                 <span class="medicina-name">{{medicina.source.name}}</span>
-              </ion-car-subtitle>
+              </ion-card-subtitle>
               <ion-card-title>{{medicina.title}}</ion-card-title>
             </ion-card-header>
 
@@ -41,10 +41,10 @@
               [src]="medicina.urlToImage">
             </ion-img>
 
-            <ion-car-content>
+            <ion-card-content>
               <p class="medicina-description">{{medicina.description}}</p>
               
-            </ion-car-content>
+            </ion-card-content>
           </ion-card>
         </ion-col>
       </ion-row>
